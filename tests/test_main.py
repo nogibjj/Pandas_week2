@@ -1,4 +1,4 @@
-from main import pandas_descriptive_stat_mean,pandas_descriptive_stat_median,pandas_descriptive_stat_std,visualize_data
+from src.main import pandas_descriptive_stat_mean,pandas_descriptive_stat_median,pandas_descriptive_stat_std,visualize_data
 import pandas as pd
 
 def test_pandas_descriptive_stat_mean():
