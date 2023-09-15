@@ -1,53 +1,54 @@
-# CiCd Automation Template for Python Projects
-### by Rakeen Rouf
+# Mini-Project 2: Analyzing Car Data with Pandas
+### by Titus Robin
 
-[![PythonCiCd](https://github.com/rmr327/cicd_python_template/actions/workflows/python_ci_cd.yml/badge.svg)](https://github.com/rmr327/cicd_python_template/actions/workflows/python_ci_cd.yml)
+## Purpose
 
----
+The objective of this project is to leverage Pandas to load and manipulate a DataFrame. We have employed a `pd.DataFrame` as sample data, conducted various data analysis tasks using functions like `pandas_descriptive_stats_*()`, and created a scatter plot for data visualization.
 
-**Summary**
+## Dataset
 
-This Python GitHub automation template is designed to enhance your development workflow by incorporating a Continuous Integration and Continuous Deployment (CI/CD) automation process. With this template, you can effortlessly set up a CI/CD pipeline for your Python projects, automating routine tasks and ensuring efficient collaboration.
+Our dataset focuses on information related to different car models, encompassing attributes such as:
 
-By implementing a CI/CD workflow, you can achieve the following benefits:
+- Miles per gallon (mpg)
+- Number of cylinders (cylinders)
+- Gear type (gear)
+- And more...
 
-- **Automated Testing:** Ensure that your code is thoroughly tested before it gets deployed, reducing the likelihood of bugs or issues in production.
+## Functions
 
-- **Streamlined Deployment:** Automate the deployment process, making it faster, more reliable, and consistent across different environments.
+We've developed a set of functions designed to extract essential statistics from the Pandas DataFrame:
 
-- **Code Quality Checks:** Enforce code quality standards and best practices, ensuring that your project maintains high standards of readability, maintainability, and performance.
+1. `pandas_descriptive_stat_mean`: Computes the mean value of a specified column.
+2. `pandas_descriptive_stat_median`: Calculates the median value of a specified column.
+3. `pandas_descriptive_stat_std`: Determines the standard deviation of a specified column.
+4. `pandas_descriptive_stat_max`: Finds the maximum value of a specified column.
 
-- **Simplified Collaboration:** Facilitate seamless code sharing and transfer between team members and environments, making it easier to collaborate on projects.
+Additionally, a dedicated test file is provided to validate the accuracy of these descriptive statistics.
 
-With the option to develop in the cloud using GitHub Code Spaces, you can further enhance your productivity and eliminate the need for local setup and configuration.
+## Visualization
 
----
+To gain valuable insights from the dataset, we've crafted a scatter plot that visually compares two variables: "Miles per Gallon" and "Horsepower." This visualization aids in understanding the relationship between these attributes.
 
-**What is Code Spaces?**
+## Automation
 
-GitHub Code Spaces provides cloud-hosted development environments for your repositories. It allows you to develop entirely in the cloud, eliminating the need for local setup and configuration.
+We have implemented automation practices and tools to enhance efficiency and maintain code quality:
 
----
+1. **Devcontainer**: Inside the `.devcontainer` folder, you'll find two crucial files:
 
-**Getting Started**
+   - `Dockerfile`: This file defines environment variables to ensure a consistent development environment for all collaborators, mitigating potential conflicts and version mismatches.
+   - `devcontainer.json`: A JSON file specifying environment variables and installed extensions within the virtual environment.
 
-To get started with this template, follow these steps:
+2. **Makefile**: Our `Makefile` contains instructions for several tasks, including:
 
-1. **Create a New Repository:** 
-   - Click the "Use this template" button or manually create a new repository using this template as a starting point.
+   - Installing required packages (specified in `requirements.txt`).
+   - Enforcing code formatting using the `black` formatter.
+   - Running tests for functions (files starting with "Check...").
+   - Linting the code with `pylint`.
 
-2. **Set Up CI/CD:** 
-   - Define your CI/CD workflows by configuring the `.github/workflows/` directory. Modify the workflows to suit your project's specific needs. 
+3. **GitHub Actions**: We've integrated GitHub Actions using the `main.yml` file, enabling automated tasks based on events such as pushes and pull requests. The workflow covers installing packages, code formatting, linting, and testing.
 
-3. **Start Code Space (Optional):**
-   - If you want to develop entirely in the cloud, click the "Code" button on the GitHub repository page and select "Open with Code Spaces". This will launch a cloud-based development environment where you can start coding without any local setup.
+4. **Requirements.txt**: The `requirements.txt` file enumerates the essential Python packages for the project. While it currently comprises generic Python packages, it can be tailored to include specific dependencies as required for future project scopes.
 
-4. **Customize Automation:** 
-   - Customize the automation scripts and rules in the `.github/workflows/` directory. Configure issue management, release automation, and code quality checks according to your project requirements.
+This project is aimed at demonstrating efficient data analysis using the Pandas library while emphasizing code quality through automation and testing.
 
-5. **Documentation:** 
-   - Update the project's documentation to reflect your project's specific setup, workflows, and guidelines.
-
-6. **Requirement.txt:**
-   - Update the `requirements.txt` file to ensure all necessary Python packages have been included.
 
