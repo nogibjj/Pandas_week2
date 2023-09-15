@@ -1,5 +1,6 @@
 # Mini-Project 2: Analyzing Car Data with Pandas
 ### by Titus Robin
+[![CI](https://github.com/nogibjj/Pandas_week2/actions/workflows/python_ci_cd.yml/badge.svg)](https://github.com/nogibjj/Pandas_week2/actions/workflows/python_ci_cd.yml)
 
 ## Purpose
 
@@ -28,6 +29,7 @@ Additionally, a dedicated test file is provided to validate the accuracy of thes
 ## Visualization
 
 To gain valuable insights from the dataset, we've crafted a scatter plot that visually compares two variables: "Miles per Gallon" and "Horsepower." This visualization aids in understanding the relationship between these attributes.
+<img width="615" alt="Screen Shot 2023-09-13 at 4 38 39 PM" src="https://github.com/nogibjj/Pandas_week2/assets/143838819/0da1ad49-08d2-4538-8e07-39ce74937a98">
 
 ## Automation
 
